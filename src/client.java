@@ -12,7 +12,7 @@ public class client {
     public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
         try {
-            Socket s = new Socket("localhost", 999);
+            Socket s = new Socket("localhost", 80);
             System.out.println("Socket connected to server");
 
             BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
@@ -31,10 +31,11 @@ public class client {
                 out.println(operation);
 
                 String result = in.readLine();
-                System.out.println("Result: " + result);
+                out.println(result);
+
             }
         } catch(Exception e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
     }
 }

@@ -36,7 +36,6 @@ public class Server {
                 } else {
                     out.println("Invalid Operator");
                 }
-                System.out.println(result);
                 out.println(result);
                 out.close();
                 in.close();
